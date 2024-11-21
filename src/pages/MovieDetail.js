@@ -22,7 +22,7 @@ export const MovieDetail = () => {
     fetchMovie();
   }, [params.id]);
 
-  const pageTitle = useTitle(movie.title);
+  useTitle(movie.title);
 
   return (
     <main>
