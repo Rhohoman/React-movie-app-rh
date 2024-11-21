@@ -1,5 +1,6 @@
 import { Card } from "../components";
 import { useFetch } from "../hooks/useFetch";
+import { useTitle } from "../hooks/useTitle";
 import { useSearchParams } from "react-router-dom";
 
 export const Search = ({ apiPath }) => {
@@ -7,6 +8,8 @@ export const Search = ({ apiPath }) => {
   const queryTerm = searchParams.get("q");
 
   const { data: movies } = useFetch(apiPath, queryTerm);
+
+  const pageTitle = useTitle(`Search result for ${queryTerm}`);
 
   return (
     <main>
