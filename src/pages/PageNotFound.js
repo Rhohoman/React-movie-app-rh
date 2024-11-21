@@ -2,7 +2,7 @@
 import { Button } from "../components/Button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { useTitle } from "../hooks/useTitle";
+// import { useTitle } from "../hooks/useTitle";
 
 export const PageNotFound = () => {
   useEffect(() => {
